@@ -4,5 +4,15 @@ spring:
     template-loader-path: classpath:/templates
     charset: utf-8
     cache: false
+  datasource:
+    type:  com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/website_search
+    username: root
+    password: root123
+    driver-class-name: com.mysql.jdbc.Driver
+  mybatis:
+#   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+   mapper-locations: classpath:mapper/*.xml
 server:
   port: 8080
+
