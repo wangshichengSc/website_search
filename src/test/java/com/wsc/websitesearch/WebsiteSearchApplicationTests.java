@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@MapperScan("com.wsc.websitesearch.*")
+//@MapperScan("com.wsc.websitesearch.**.dao")
 public class WebsiteSearchApplicationTests {
 
 	@Test

@@ -6,13 +6,16 @@ spring:
     cache: false
   datasource:
     type:  com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/website_search
+    url: jdbc:mysql://localhost:3306/website_search?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root123
     driver-class-name: com.mysql.jdbc.Driver
-  mybatis:
-#   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
-   mapper-locations: classpath:mapper/*.xml
 server:
   port: 8080
+mybatis:
+#  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    #spring boot集成mybatis的方式打印sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 

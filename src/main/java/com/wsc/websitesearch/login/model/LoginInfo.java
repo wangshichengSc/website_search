@@ -4,6 +4,7 @@ package com.wsc.websitesearch.login.model;
 import java.sql.Timestamp;
 
 public class LoginInfo {
+    private Long id;
     private String loginName;
     private String password;
     private String token;
@@ -11,6 +12,14 @@ public class LoginInfo {
 
     public LoginInfo() {
         this.timeStamp = new Timestamp(System.currentTimeMillis());
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getLoginName() {
