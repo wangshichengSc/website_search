@@ -3,6 +3,7 @@ package com.wsc.websitesearch.login.controller;
 import com.wsc.websitesearch.login.model.LoginInfo;
 import com.wsc.websitesearch.login.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,5 +22,10 @@ public class LoginController {
         loginInfo = loginService.login(loginInfo);
         session.setAttribute("loginInfo", loginInfo);
         return null;
+    }
+
+    @GetMapping("/interceptorTest")
+    public void interceptorTest(HttpServletRequest request){
+
     }
 }
