@@ -17,5 +17,8 @@ mybatis:
   configuration:
     #spring boot集成mybatis的方式打印sql
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    web: debug
 
 

@@ -1,4 +1,4 @@
-package com.wsc.websitesearch.common;
+package com.wsc.websitesearch.interceptor;
 
 import com.wsc.websitesearch.login.dao.LoginDao;
 import com.wsc.websitesearch.login.model.LoginInfo;
@@ -18,7 +18,7 @@ public class UrlInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        System.out.println("------" + request.getContextPath());
+        System.out.println(request.getRequestURI());
         /*
         验证token有效性，前期先存放在session中，对比数据库里的token
         以后会放在redis里，从request请求参数里获取被对比的token

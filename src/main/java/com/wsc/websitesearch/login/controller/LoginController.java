@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class LoginController {
@@ -24,8 +26,15 @@ public class LoginController {
         return null;
     }
 
-    @GetMapping("/interceptorTest")
+    @GetMapping("/api/interceptorTest")
     public void interceptorTest(HttpServletRequest request){
+        System.out.println("in method interceptor");
+    }
 
+    @GetMapping("/api/hello")
+    public Object hello(){
+        Map map = new HashMap();
+        map.put("hello","hello world");
+        return map;
     }
 }
